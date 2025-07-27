@@ -1,0 +1,50 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    guide.txt                                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jomunoz <jomunoz@student.42lisboa.com>     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/07/14 21:43:13 by jomunoz           #+#    #+#              #
+#    Updated: 2025/07/24 22:32:23 by jomunoz          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+1. Parallel (orthographic) projection
+
+    Simplicity: Extremely easy to add after isometric: you just drop or rearrange axes (screen_x = x * scale, screen_y = y * scale - z * elevation).
+
+    Effort: Minimal. You can toggle with a key.
+
+    Usefulness: Shows difference from isometric, makes the project feel more complete.
+
+    Recommendation: ✅ Start here. Easiest.
+
+2. Zoom in/out
+
+    Simplicity: Just multiply your projection results by a “scale” factor.
+
+    Effort: Low.
+
+    Utility: Highly noticeable, always works, no special math.
+
+3. Translation
+
+    Simplicity: Adjust x_offset, y_offset variables for up/down/left/right.
+
+    Effort: Minimal if you already have offsets.
+
+4. Rotation
+
+    Simplicity: Requires basic trig and a little more math, but still moderate (apply 2D rotation matrix to projected points before offset).
+
+    Effort: Medium.
+
+5. Other bonus (your choice)
+
+    Suggestions:
+
+        Color gradients (already working on it): Strongest visual bonus!
+
+        Z-height "flatten/toggle": Reduce/increase z-intensity; easy to add.
